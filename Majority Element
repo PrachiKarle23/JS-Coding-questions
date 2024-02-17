@@ -1,0 +1,15 @@
+var majorityElement = function(nums) {
+    var obj={};
+    for(let x of nums){
+        obj[x]=(obj[x])?obj[x]+1:1;
+    }
+    var maxi=0;
+    var ans;
+    for(let key in obj){
+        if(obj[key]>maxi){
+             maxi=obj[key];
+             ans=key;
+        }
+    }
+    return ans;
+};

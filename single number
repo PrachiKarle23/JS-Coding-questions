@@ -12,3 +12,18 @@ var singleNumber = function(nums) {
      }
      return ans;
 };
+
+
+var singleNumber = function(nums) {
+    var obj={};
+    for(let x of nums){
+        obj[x]=(obj[x])? obj[x]+1:1;
+    }
+    let ans;
+    for(let k in obj){
+        if(obj[k]==1){
+            ans=k;
+        }
+    }
+    return ans;
+};

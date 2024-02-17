@@ -1,0 +1,14 @@
+var singleNumber = function(nums) {
+    var obj={};
+    for(let x of nums){
+        obj[x]=(obj[x])?obj[x]+1:1;
+
+    }
+    var ans;
+     for(let key in obj){
+         if(obj[key]==1){
+             ans=key;
+         }
+     }
+     return ans;
+};
